@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "732f0f05-b9c6-4763-b636-e4dc83c5cd11",
+		"name": "car-dealer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13628794",
+		"_collection_link": "https://grey-water-607719.postman.co/workspace/My-Workspace~7c8e265d-3378-4686-836d-e08a8569baca/collection/13628794-732f0f05-b9c6-4763-b636-e4dc83c5cd11?action=share&source=collection_link&creator=13628794"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"fullName\": \"xullaaa\",\r\n    \"phoneNumber\": \"+9647711500575\",\r\n    \"password\":\"HeLlo@12345@dD\",\r\n    \"confirmPassword\": \"HeLlo@12345@dD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"phoneNumber\": \"+9647711500575\",\r\n    \"password\":\"HeLlo@12345@dD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "showroom",
+			"item": [
+				{
+					"name": "Create showroom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"2dsad2\",\r\n      \"phoneNumber\": \"+9647711500574\",\r\n      \"email\": \"ao@gmail.com\",\r\n      \"website\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"facebookLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"instagramLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"tiktokLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"snapchatLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"cityId\": \"kjh6jdt9e8clqo2bflfujk1n\",\r\n      \"street\": \"street\",\r\n      \"profilePicture\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"type\": \"SHOWROOM\",\r\n      \"latitude\": 321,\r\n      \"longitude\": 2321\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update showroom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"xula22\",\r\n      \"phoneNumber\": \"+9647711500576\",\r\n      \"email\": \"ao@gmail.com\",\r\n      \"website\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"facebookLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"instagramLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"tiktokLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"snapchatLink\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"governorate\": \"governorate\",\r\n      \"cityId\": \"kjh6jdt9e8clqo2bflfujk1n\",\r\n      \"street\": \"street2\",\r\n      \"profilePicture\": \"http://localhost:3000/api/v1/showrooms\",\r\n      \"type\": \"DEALERSHIP\",\r\n      \"latitude\": 321,\r\n      \"longitude\": 2321\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete showroom",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImdycnpmaGVtZTJsZHIxbThua3diNmp6aCIsImlhdCI6MTcxMDk4MTcxNiwiZXhwIjoxNzEwOTg1MzE2fQ.xWp52J3VcL1GN53J-vWutFBd5W1hvZo4hi1fO9MYGJ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/pni90mnecrgfn0r5jyp5x1dv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"pni90mnecrgfn0r5jyp5x1dv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My showrooms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1ZWZnbzJxMmJjNXBtYmNhaXJ3bmlvdiIsInBob25lTnVtYmVyIjoiKzk2NDc3MTE1MDA1NzQiLCJmdWxsTmFtZSI6Inh1bGxhYWEiLCJsZXZlbCI6IlVTRVIiLCJpYXQiOjE3MTI2MDg3ODEsImV4cCI6MTcxMjYxMjM4MX0.P2GzJSx_qzYtNmrdzXCy_lM4dtbM7o0Z2H6psArsb6g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/me/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"me",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All showrooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single showroom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/ic8nq13o5ns9h41cdbsnoh3z",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"ic8nq13o5ns9h41cdbsnoh3z"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "metadata",
+					"item": [
+						{
+							"name": "create city",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM1ZWZnbzJxMmJjNXBtYmNhaXJ3bmlvdiIsInBob25lTnVtYmVyIjoiKzk2NDc3MTE1MDA1NzQiLCJmdWxsTmFtZSI6Inh1bGxhYWEiLCJsZXZlbCI6IlVTRVIiLCJpYXQiOjE3MTE4MzA2ODcsImV4cCI6MTcxMTgzNDI4N30.n0vux5Hr_cTwbl9Ps1P2xea9CHVm0oc5WQK35KWA_KA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"kalar\",\r\n    \"governorateId\": \"ilo29oos241vw755fi6oomnq\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/admin/metadata/city",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"metadata",
+										"city"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create governorate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"sulaimaniyah\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/admin/metadata/governorate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"metadata",
+										"governorate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "metadata",
+					"item": [
+						{
+							"name": "Get all cities",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/public/metadata/cities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"public",
+										"metadata",
+										"cities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All governorates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/public/metadata/governorates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"public",
+										"metadata",
+										"governorates"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "save car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\" : \"Toyota\",\r\n    \"model\" : \"Camry\",\r\n    \"year\" : 2023,\r\n    \"trim\" : \"SE+\",\r\n    \"transmission\" : \"gasoline\",\r\n    \"color\": \"red\",\r\n    \"fuel\" : \"gasoline\",\r\n    \"plateType\" : \"vehicle\",\r\n    \"plateCityId\": \"kjh6jdt9e8clqo2bflfujk1n\",\r\n    \"importCountry\": \"usa\",\r\n    \"price\" : 250000,\r\n    \"currency\" : \"USD\",\r\n    \"priceHidden\" : false,\r\n    \"phoneNumber\" : \"+9647711500573\",\r\n    \"inspectionDocumentLink\": \"https://google.com\",\r\n    \"damages\":\"none\",\r\n    \"damageType\": \"Clean\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all my cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25/cars/me/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25",
+								"cars",
+								"me",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my car by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25/cars/qz1t6580ogo8f1kc0jo4rram",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25",
+								"cars",
+								"qz1t6580ogo8f1kc0jo4rram"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a car from a show room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25/cars/qz1t6580ogo8f1kc0jo4rram",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25",
+								"cars",
+								"qz1t6580ogo8f1kc0jo4rram"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload car img",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/aland/Downloads/Stamp.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/showrooms/b16xfrg4xy1o3bpkoocftd25/cars/hg91wrvv52y76vnn0h30461p/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"showrooms",
+								"b16xfrg4xy1o3bpkoocftd25",
+								"cars",
+								"hg91wrvv52y76vnn0h30461p",
+								"images"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRwZWk1ZWkzN2d1aG52ZzQ2bjBiN3lwdSIsInBob25lTnVtYmVyIjoiKzk2NDc3MTE1MDA1NzUiLCJmdWxsTmFtZSI6Inh1bGxhYWEiLCJsZXZlbCI6IlVTRVIiLCJpYXQiOjE3MTQ5Mjg4MzUsImV4cCI6MTcxNDkzMjQzNX0.Pj9uk_wJsPE21R_tg0C16XZjFnJgsI2lbAaX6yPD3BQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
