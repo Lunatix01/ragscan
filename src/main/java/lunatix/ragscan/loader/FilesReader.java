@@ -24,9 +24,7 @@ public class FilesReader {
 
     @ShellMethod(
             key = "load",
-            value = """
-                    Give it the main folder and it will load supported files inside of it
-                    """,
+            value = "Give it the main folder and it will load supported files inside of it",
             group = "Prerequisite")
     public String loadFiles(String fullPath) {
         return Try.withResources(() -> Files.walk(Path.of(fullPath)))
