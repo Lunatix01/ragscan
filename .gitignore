@@ -34,3 +34,6 @@ build/
 
 ### QDRANT
 /qdrant_data
+
+### logs
+*.log
