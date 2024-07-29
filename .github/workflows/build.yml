@@ -2,7 +2,7 @@ name: Build Ragscan with GraalVM
 on: [push, pull_request]
 jobs:
   build:
-    name: HelloWorld on ${{ matrix.os }}
+    name: Ragscan on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -24,7 +24,7 @@ jobs:
           java --version
           native-image --version
           - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
-            run: mvn -Pnative -DskipTests native:compile
+            run: mvnw -Pnative -DskipTests native:compile
 
       - name: Upload binary
         uses: actions/upload-artifact@v2
