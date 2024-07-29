@@ -27,11 +27,11 @@
         <url/>
     </scm>
     <properties>
-        <java.version>21.0.1</java.version>
+        <java.version>21.0.4</java.version>
         <spring-ai.version>1.0.0-SNAPSHOT</spring-ai.version>
         <spring-shell.version>3.3.0</spring-shell.version>
-        <maven.compiler.source>21.0.1</maven.compiler.source>
-        <maven.compiler.target>21.0.1</maven.compiler.target>
+        <maven.compiler.source>21.0.4</maven.compiler.source>
+        <maven.compiler.target>21.0.4</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
