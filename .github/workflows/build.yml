@@ -23,7 +23,7 @@ jobs:
           java --version
           native-image --version
       - name: Compile with maven
-        run: mvn -e -Pnative native:compile -DskipTests
+        run: mvn -X -Pnative native:compile -DskipTests
 
       - name: Upload binary
         uses: actions/upload-artifact@v2
