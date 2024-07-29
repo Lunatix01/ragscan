@@ -9,7 +9,6 @@ jobs:
         os: [macos-latest, windows-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v4
-
       - uses: graalvm/setup-graalvm@v1
         with:
           java-version: '21'
@@ -24,7 +23,7 @@ jobs:
           java --version
           native-image --version
           - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
-            run: mvnw -Pnative -DskipTests native:compile
+            run: mvn -Pnative package
 
       - name: Upload binary
         uses: actions/upload-artifact@v2
