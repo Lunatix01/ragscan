@@ -30,8 +30,8 @@
         <java.version>21.0.4</java.version>
         <spring-ai.version>1.0.0-SNAPSHOT</spring-ai.version>
         <spring-shell.version>3.3.0</spring-shell.version>
-        <maven.compiler.source>21.0.4</maven.compiler.source>
-        <maven.compiler.target>21.0.4</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
