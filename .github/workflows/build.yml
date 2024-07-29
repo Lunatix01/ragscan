@@ -22,7 +22,7 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           java --version
           native-image --version
-      - name: Example step using Maven plugin
+      - name: Compile with maven
         run: mvn -Pnative native:compile -DskipTests
 
       - name: Upload binary
