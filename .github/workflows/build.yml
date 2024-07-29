@@ -22,8 +22,10 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           java --version
           native-image --version
-      - name: Compile with maven
-        run: mvn -X -Pnative native:compile -DskipTests
+          gu install native-image
+          mvn -X -Pnative native:compile -DskipTests
+#      - name: Compile with maven
+#        run: mvn -X -Pnative native:compile -DskipTests
 
       - name: Upload binary
         uses: actions/upload-artifact@v2
