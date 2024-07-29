@@ -22,8 +22,8 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           java --version
           native-image --version
-      - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
-        run: mvnw -Pnative native:compile -DskipTests
+      - name: Example step using Maven plugin
+        run: mvn -Pnative native:compile -DskipTests
 
       - name: Upload binary
         uses: actions/upload-artifact@v2
