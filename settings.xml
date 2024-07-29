@@ -9,8 +9,13 @@
             <mirrorOf>*</mirrorOf>
         </mirror>
         <mirror>
+            <id>spring-snapshots</id>
+            <url>https://repo.spring.io/snapshot</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+        <mirror>
             <id>central</id>
-            <mirrorOf>spring-milestones</mirrorOf>
+            <mirrorOf>spring-snapshots</mirrorOf>
             <url>https://repo.maven.apache.org/maven2</url>
         </mirror>
 
@@ -34,6 +39,14 @@
                     <id>central</id>
                     <name>Maven Repository Switchboard</name>
                     <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>spring-snapshots</id>
+                    <name>Spring Snapshots</name>
+                    <url>https://repo.spring.io/snapshot</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
                 </repository>
             </repositories>
         </profile>
