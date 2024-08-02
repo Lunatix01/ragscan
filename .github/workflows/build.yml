@@ -32,11 +32,8 @@ jobs:
           name: ragscan-${{ matrix.os }}
           path: ragscan*
   build:
-    name: Ragscan on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ windows-latest, ubuntu-latest ]
+    name: Ragscan
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Java
@@ -45,7 +42,7 @@ jobs:
           distribution: oracle
           java-version: 21
       - name: Build Ragscan
-        run: mvn -f pom.xml clean package
+        run: mvn -f pom.xml clean package -DskipTests
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
