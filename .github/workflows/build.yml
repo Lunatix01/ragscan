@@ -1,7 +1,8 @@
 name: Build Ragscan with GraalVM
 on: [push, pull_request]
 jobs:
-  build:
+  build-with-graal:
+    if: false # currently disabled
     name: Ragscan on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -22,12 +23,30 @@ jobs:
           echo "JAVA_HOME: $JAVA_HOME"
           java --version
           native-image --version
-          mvn -X -Pnative native:compile -DskipTests
-#      - name: Compile with maven
-#        run: mvn -X -Pnative native:compile -DskipTests
+      - name: Compile with maven
+        run: mvn -X -Pnative native:compile -DskipTests
 
       - name: Upload binary
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ragscan-${{ matrix.os }}
           path: ragscan*
+  build:
+    name: Ragscan on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ windows-latest, ubuntu-latest ]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+      - name: Build Ragscan
+        run: mvn -f pom.xml clean package
+      - name: Upload Maven build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: ./target/ragscan.jar
