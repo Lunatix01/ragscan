@@ -44,6 +44,7 @@ jobs:
       - name: Build Ragscan
         run: mvn -f pom.xml clean package -DskipTests
       - name: Upload build artifact
+        if: github.ref_name == 'master'
         uses: actions/upload-artifact@v4
         with:
           name: artifact
