@@ -1,4 +1,4 @@
-name: Build Ragscan with GraalVM
+name: Build Ragscan
 on: [push, pull_request]
 jobs:
   build-with-graal:
