@@ -39,9 +39,9 @@ public class FilesReader {
                                     .map(fileLoader::load)
                                     .peek(documents -> {
                                         final var splitter = new TokenTextSplitter();
-                                        final var splittedDocuments = splitter.apply(documents);
-                                        vectorStore.accept(splittedDocuments);
-                                        log.info("added {} documents", splittedDocuments.size());
+                                        final var splitDocuments = splitter.apply(documents);
+                                        vectorStore.accept(splitDocuments);
+                                        log.info("added {} documents", splitDocuments.size());
                                     })
                                     .get();
                         })

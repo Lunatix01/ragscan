@@ -9,10 +9,9 @@ public class GeminiClient {
 
     @Bean
     RestClient restClient() {
-        return
-                RestClient.builder()
-                        .baseUrl("https://generativelanguage.googleapis.com")
-                        .defaultHeader("Content-Type: application/json")
-                        .build();
+        return RestClient.builder()
+                .baseUrl("https://generativelanguage.googleapis.com")
+                .defaultHeader("Content-Type: application/json")
+                .build();
     }
 }
