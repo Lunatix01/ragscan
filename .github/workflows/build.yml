@@ -1,0 +1,51 @@
+name: Build Ragscan
+on: [push, pull_request]
+jobs:
+  build-with-graal:
+    if: false # currently disabled
+    name: Ragscan on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '22'
+          distribution: 'graalvm'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          native-image-job-reports: 'true'
+
+      - name: Build Ragscan
+        run: |
+          echo "GRAALVM_HOME: $GRAALVM_HOME"
+          echo "JAVA_HOME: $JAVA_HOME"
+          java --version
+          native-image --version
+      - name: Compile with maven
+        run: mvn -X -Pnative native:compile -DskipTests
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: ragscan-${{ matrix.os }}
+          path: ragscan*
+  build:
+    name: Ragscan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: oracle
+          java-version: 21
+      - name: Build Ragscan
+        run: mvn -f pom.xml clean package -DskipTests
+      - name: Upload build artifact
+        if: github.ref_name == 'master'
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: ./target/*.jar
