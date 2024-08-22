@@ -37,3 +37,6 @@ Don't try to retrieve an API key from older `.git` versions, it's a rabbit hole 
 
 Please create an Issue, if something is wrong I will look into it, and feel free to contribute to the project.
 ==============
+
+
+Shout-out to my friend Luxunator for the idea and everything.
