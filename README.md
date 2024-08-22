@@ -2,6 +2,9 @@ Simple CLI Retrieval Augmented Generation Scanner
 =================================================
 Aim of the project: A showcase of a RAG scanner written in Java and using [Spring AI](https://docs.spring.io/spring-ai/reference/api/index.html), which scans the targeted documents and you can ask questions to the LLM regarding the given documents.
 
+## Disclaimer
+This tool is intended for educational and productivity purposes only. It is designed to assist users in managing and querying their own documents. Any illegal or unethical use of this software is strictly prohibited.
+
 ## Requirements
 1. [Java 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) installed on your device
 2. [Docker](https://www.docker.com/products/docker-desktop/)
@@ -18,7 +21,6 @@ Aim of the project: A showcase of a RAG scanner written in Java and using [Sprin
 3. When the shell opens type `collection-size 768` (for Gemini `768` is compatible).
 4. Place your files in a directory, copy the full path of the directory, and run something like this `load /your/path`, wait till the files are chunked and loaded to `Qdrant vector database`.
 5. Finally in the shell write `ask "your question here"` and that's it.
-
 
 
 ### Notes
