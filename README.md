@@ -19,7 +19,7 @@ This tool is intended for educational and productivity purposes only. It is desi
 1. Run `docker-compose up` in your CMD/Powershell/Terminal
 2. Run the project using maven, on Windows: `./mvnw spring-boot:run`, on Linux/Mac run `./mvn spring-boot:run`.
 3. When the shell opens type `collection-size 768` (for Gemini `768` is compatible).
-4. Place your files in a directory, copy the full path of the directory, and run something like this `load /your/path`, wait till the files are chunked and loaded to `Qdrant vector database`.
+4. Place your files in a directory, copy the full path of the directory, and run something like this `load //your//path`, wait till the files are chunked and loaded to `Qdrant vector database`.
 5. Finally in the shell write `ask "your question here"` and that's it.
 
 
