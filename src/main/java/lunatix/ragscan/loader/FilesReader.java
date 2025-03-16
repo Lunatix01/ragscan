@@ -40,6 +40,7 @@ public class FilesReader {
                                     .peek(documents -> {
                                         final var splitter = new TokenTextSplitter();
                                         final var splitDocuments = splitter.apply(documents);
+                                        log.info("Adding documents...");
                                         vectorStore.accept(splitDocuments);
                                         log.info("added {} documents", splitDocuments.size());
                                     })
@@ -48,6 +49,6 @@ public class FilesReader {
                         .toList()
                 )
                 .map(ignored -> "loaded Successfully")
-                .getOrElse(() -> "Failed to load files");
+                .getOrElseThrow(throwable -> new RuntimeException("Error while loading file", throwable));
     }
 }
