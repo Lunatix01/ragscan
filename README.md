@@ -27,7 +27,7 @@ This tool is intended for educational and productivity purposes only. It is desi
 It's a simple project, needs a lot of improvements like: 
 1. Improve chunking documents (Currently chunked by token size)
 2. Support more file types (Currently supports txt, HTML, JSON, MD, docx, ppt, pdf, and a lot more)
-3. Support other Chat models like GPT, Ollama, etc... (currently supports Gemini version `gemini-1.5-flash-latest`, the reason I decided to use Gemini is because it has a good free tier)
+3. Support other Chat models and Embeddings like GPT, Ollama, etc... (currently supports Gemini version `gemini-2.0-flash` and embedding `gemini-embedding-exp-03-07`, the reason I decided to use Gemini is that it has a good free tier)
 4. Support to make it a standalone executable and a jar file, (Currently you can build it yourself and run it, it has no problem, but I will simplify it)
 5. Support other vector databases ( Currently supports Qdrant, to be honest, it's good enough)
 6. Support custom System Context and custom similar returned documents in DB (Default, for now, is 5.)
