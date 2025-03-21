@@ -19,7 +19,7 @@ This tool is intended for educational and productivity purposes only. It is desi
 1. Run `docker-compose up` in your CMD/Powershell/Terminal
 2. Run the project using maven, on Windows: `./mvnw spring-boot:run`, on Linux/Mac run `./mvn spring-boot:run`.
 3. When the shell opens type `collection-size 768` (for Gemini `768` is compatible).
-4. Place your files in a directory, copy the full path of the directory, and run something like this `load /your/path`, wait till the files are chunked and loaded to `Qdrant vector database`.
+4. Place your files in a directory, copy the full path of the directory, and run something like this `load //your//path`, wait till the files are chunked and loaded to `Qdrant vector database`.
 5. Finally in the shell write `ask "your question here"` and that's it.
 
 
@@ -27,7 +27,7 @@ This tool is intended for educational and productivity purposes only. It is desi
 It's a simple project, needs a lot of improvements like: 
 1. Improve chunking documents (Currently chunked by token size)
 2. Support more file types (Currently supports txt, HTML, JSON, MD, docx, ppt, pdf, and a lot more)
-3. Support other Chat models like GPT, Ollama, etc... (currently supports Gemini version `gemini-1.5-flash-latest`, the reason I decided to use Gemini is because it has a good free tier)
+3. Support other Chat models and Embeddings like GPT, Ollama, etc... (currently supports Gemini version `gemini-2.0-flash` and embedding `gemini-embedding-exp-03-07`, the reason I decided to use Gemini is that it has a good free tier)
 4. Support to make it a standalone executable and a jar file, (Currently you can build it yourself and run it, it has no problem, but I will simplify it)
 5. Support other vector databases ( Currently supports Qdrant, to be honest, it's good enough)
 6. Support custom System Context and custom similar returned documents in DB (Default, for now, is 5.)
